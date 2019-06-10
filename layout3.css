@@ -1,0 +1,49 @@
+/* Grid area Names */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+   background-color: #eee;
+   width: 1000px;
+   margin: 30px auto;
+
+   display: grid;
+
+   grid-template-rows: 100px 200px 400px 100px;
+   grid-template-columns: repeat(3, 1fr) 200px;
+
+   grid-gap: 30px;
+
+   grid-template-areas: "head head head head"
+                        "box box box sidebar"
+                        "main main main sidebar"
+                        "foot foot foot foot";
+}
+
+.container > * {
+    background-color: orange;
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.header {
+   grid-area: head;
+}
+
+.main-content {
+   grid-area: main;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer {
+    grid-area: foot;
+}
